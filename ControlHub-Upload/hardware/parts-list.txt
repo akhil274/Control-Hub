@@ -1,6 +1,21 @@
+CONTROLHUB - PARTS LIST
+=======================
+
 1.ESP32 Development Board
 2.DS3231 RTC Module
 3.2-Channel Relay Module 5V
 4.Power Supply 5V
 5.CR2032 Battery
 6.Electrical extension board 
+
+WIRING
+======
+ESP32 GPIO 21 → RTC SDA
+ESP32 GPIO 22 → RTC SCL
+ESP32 3.3V → RTC VCC
+ESP32 GND → RTC GND
+
+ESP32 GPIO 26 → Relay IN1 (Light)
+ESP32 GPIO 27 → Relay IN2 (CO2)
+ESP32 VIN → Relay VCC (5V)
+ESP32 GND → Relay GND
