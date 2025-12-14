@@ -164,8 +164,13 @@ For real installations, **use a proper regulated 5V supply**.
 - **Manual Mode** → Instant ON / OFF  
 - **Auto Mode** → Set ON & OFF time  
 - Click **Save Settings**  
-- ESP32 runs independently  
+- ESP32 runs independently
 
+  ## My Hardware steup
+<p align="center">
+  <img src="ControlHub-Upload/images/harware-setup.jpg" width="500">
+  <img src="ControlHub-Upload/images/hardware-final.jpg" width="500">
+</p>
 ---
 
 ## 🧠 Notes from the Creator
