@@ -192,14 +192,36 @@ More images you can find in [images](ControlHub-Upload/images)
 ---
 
 ## 🧠 Notes from the Creator
+This project was created mainly for learning, using AI-assisted coding and experimentation.
 
 - Not a professional developer  
 - No coding background  
-- Built fully using AI assistance  
-- Made for learning and fun  
+- used AI for coding
+- Made for learning and hobby  
 - Code may not be perfect, but it works  
 
 Feel free to improve or modify.
+
+## 🚧 Roadmap
+
+### 🔴 Phase 1 – Refinement & Stability 
+- Refactor firmware and Android app code for better structure and maintainability
+- Improve and extend validation and safety checks for scheduling logic and user input
+- Improve app UI/UX and add clearer device and schedule status feedback
+- Add better user feedback for invalid inputs and failed operations and RTC status
+
+### 🟠 Phase 2 – Advanced Scheduling Features 
+- Add calendar-based scheduling (day-wise control) for dosing pumps
+- Add cycling / interval mode for devices like misting systems
+- Support configurable ON/OFF cycle durations within active time windows
+
+### 🟡 Phase 3 – Configurable Devices & Scalability 
+- Add configurable devices with user-defined names
+- Allow users to assign GPIO pins to devices from the app 
+- Allow users to add and manage multiple relays without modifying firmware
+
+These plans may evolve as the project grows and learning continues.
+
 
 ---
 
@@ -213,5 +235,9 @@ MIT License – free to use, modify, and learn from.
 
 If you are a beginner, this project is for you.  
 If you are experienced, please improve it and share back.
+Feedback and contributions are welcome.
+
+If you have ideas or improvements, feel free to open an issue.
+
 
 ⭐ **If this helped you, please star the repository.**
