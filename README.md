@@ -1,34 +1,41 @@
-# 🎛️ ControlHub – ESP32 Bluetooth Relay Controller
+# 🎛️ ControlHub – ESP32 Bluetooth Aquarium Controller (Android App)
 
 ---
 
 ## 📌 Introduction
 
-**ControlHub** is a simple **Bluetooth-based relay control system** built using an **ESP32**, **DS3231 RTC**, and a **2-channel relay module**, controlled through an **Android app**.
+**ControlHub** is an open-source aquarium automation system designed to control **lighting and CO₂ equipment using time-based scheduling**, without relying on Wi-Fi, cloud services, or physical button-based timer setups.
 
-This project was created as a **learning + fun project**.  
-I am a **beginner**, and this entire project (including this GitHub repository) was built with the help of **AI-assisted (vibe) coding**, not professional embedded development.
+The system consists of:
+- An **ESP32 + DS3231 RTC** that handles all automation logic
+- A custom **Android application with a modern Material 3 design** used for setup, monitoring, and manual control via **Bluetooth**
 
-### 🎯 Project Goals
-- Easy to build  
-- Easy to understand  
-- Works **without Wi-Fi**  
-- Useful where **no internet is available**
+The Android app allows users to:
+- Connect to the ESP32 over Bluetooth
+- Manually control Light and CO₂ relays
+- Set ON/OFF schedules in Auto mode
+- Sync the ESP32 RTC with the phone time
+- Save schedules permanently to the ESP32
+
+Once schedules are saved, the ESP32 operates **fully independently** using the RTC.  
+The app is **not required to be running** for automation to work.
 
 ---
 
 ## 🤔 Why Bluetooth and NOT Wi-Fi?
 
-Many ESP32 projects use Wi-Fi, but Wi-Fi has limitations:
+Many ESP32 aquarium automation projects rely on Wi-Fi and cloud-based services, which introduces several limitations:
 
-- ❌ Wi-Fi may not be available everywhere  
-- ❌ Wi-Fi setup is difficult for beginners  
-- ❌ Time sync depends on internet  
-- ❌ Router change causes reconnection issues  
+- ❌ Wi-Fi may not be available everywhere     
+- ❌ Some time Stop working when the internet is down
+- ❌ Dependence on cloud services for control and scheduling  
+- ❌ Time synchronization often relies on internet-based NTP services
+
+  ControlHub solves these issues by using **Bluetooth for setup and control**, and a **hardware RTC for accurate timekeeping**, making it reliable, private, and fully offline-capable, without requiring routers, credentials, or internet access.
 
 ### ✅ Why Bluetooth + RTC
 - Works anywhere  
-- No internet required  
+- No internet required
 - Simple phone connection  
 - Stable local control  
 - RTC keeps time even without phone  
@@ -45,13 +52,21 @@ Many ESP32 projects use Wi-Fi, but Wi-Fi has limitations:
   <img src="ControlHub-Upload/images/Screenshot-3-Connected.png" width="220">
   <img src="ControlHub-Upload/images/Screenshot-4-light-control.png" width="220">
 </p>
+The ControlHub Android app is designed for **local, offline control** and configuration.
 
 ### App Features
-- Bluetooth connection to ESP32  
+- Bluetooth connection to ESP32 (no internet required)
 - Manual ON / OFF relay control  
+- Designed for Android 12+
 - Auto mode with ON & OFF time  
 - RTC time synchronization  
-- Works fully offline  
+- Works fully offline
+
+  ### Design Features:
+- Modern Material 3 (Material You) design
+- Dynamic color theming (adapts to user's wallpaper)
+- Dark and light mode support
+- Smooth animations and transitions
 
 ---
 
@@ -166,11 +181,13 @@ For real installations, **use a proper regulated 5V supply**.
 - Click **Save Settings**  
 - ESP32 runs independently
 
-  ## My Hardware steup
+  ## My Hardware Steup
 <p align="center">
   <img src="ControlHub-Upload/images/harware-setup.jpg" width="500">
   <img src="ControlHub-Upload/images/hardware-final.jpg" width="500">
 </p>
+
+More images you can find in [images](ControlHub-Upload/images)
 ---
 
 ## 🧠 Notes from the Creator
