@@ -136,9 +136,10 @@ For real installations, **use a proper regulated 5V supply**.
 2. Install [ESP32 Board Support](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
 3. Download firmware from [GitHub Releases](https://github.com/akhil274/Control-Hub/releases/tag/v1.0.0)
 4. Unzip and open the `.ino` file
-5. Select **ESP32 Dev Module**
-6. Upload code
-7. Open Serial Monitor (115200 baud) and confirm Bluetooth started
+5. Need to install RTClib by Adafruit Librar by going to **Sketch → Include Library → Manage Libraries → Search "RTClib" → Install**
+6. Select **ESP32 Dev Module**
+7. Upload code
+8. Open Serial Monitor (115200 baud) and confirm Bluetooth started
 
 ---
 
