@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace 'com.example.controlhub'
-    compileSdk 36
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.controlhub"
-        minSdk 31
+        minSdk 29
         targetSdk 35
         versionCode 1
         versionName "1.0"
@@ -54,6 +54,7 @@ dependencies {
 
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2"
+    implementation "androidx.compose.ui:ui-text-google-fonts:1.7.8"
 
     configurations.all {
         resolutionStrategy {
@@ -62,8 +63,4 @@ dependencies {
             force 'androidx.activity:activity:1.9.2'
         }
     }
-}
-
-tasks.withType(Test).configureEach {
-    enabled = false
 }
