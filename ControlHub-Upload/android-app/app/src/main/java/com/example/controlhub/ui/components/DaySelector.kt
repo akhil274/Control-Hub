@@ -33,7 +33,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun DaySelector(
     daysMask: Int,
-    onDaysMaskChanged: (Int) -> Unit
+    onDaysMaskChanged: (Int) -> Unit,
+    activeColor: androidx.compose.ui.graphics.Color = MaterialTheme.colorScheme.primary
 ) {
     val dayLabels = listOf("M", "T", "W", "T", "F", "S", "S")
     val allDaysMask = 0x7F  // 127 = all 7 bits set
@@ -59,7 +60,7 @@ fun DaySelector(
                 text = if (daysMask == allDaysMask) "Deselect All" else "Select All",
                 style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Medium,
-                color = MaterialTheme.colorScheme.primary,
+                color = activeColor,
                 modifier = Modifier.clickable {
                     onDaysMaskChanged(if (daysMask == allDaysMask) 0 else allDaysMask)
                 }
@@ -76,10 +77,10 @@ fun DaySelector(
 
                 Box(
                     modifier = Modifier
-                        .size(32.dp)
+                        .size(36.dp)
                         .clip(CircleShape)
                         .background(
-                            if (isActive) MaterialTheme.colorScheme.primary
+                            if (isActive) activeColor
                             else MaterialTheme.colorScheme.surfaceVariant
                         )
                         .clickable {
@@ -92,8 +93,10 @@ fun DaySelector(
                         text = label,
                         style = MaterialTheme.typography.labelLarge,
                         fontWeight = FontWeight.SemiBold,
-                        color = if (isActive) MaterialTheme.colorScheme.surfaceDim
-                        else MaterialTheme.colorScheme.onSurfaceVariant
+                        color = if (isActive) {
+                            if (activeColor == MaterialTheme.colorScheme.primary) MaterialTheme.colorScheme.onPrimary
+                            else androidx.compose.ui.graphics.Color.White
+                        } else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
