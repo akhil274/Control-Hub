@@ -39,6 +39,7 @@ ControlHub **v3.0.0 (ControlCore Architecture)** is the definitive production mi
 | **Android App Framework** | Basic Views / XML | Jetpack Compose (Initial) | **Modern Compose M3 + Luxury Stitch Design Tokens** |
 | **Icon System** | Static Drawables | Text Emojis | **100% Vector Material Icons (`Lightbulb`, `Co2`, `WaterDrop`, etc.)** |
 | **Status Bar Transitions** | Standard OS bar | Animated DisposableEffect (flashing) | **Stable `SideEffect` + `DisposableEffect(Unit)` (zero flicker)** |
+| **Android OS Compatibility** | Android 12+ (API 31+) | Android 12+ (API 31+) | **Android 10+ (API 29–35) with Dual-Mode Fallback** |
 
 ---
 
@@ -121,6 +122,12 @@ T,<id>,<onH>,<onM>,<offH>,<offM>,<daysMask>,<active>,<modeType>,<isInfinite>,<pu
 * **Anti-Overlap Spacing:** Added dedicated $16\text{dp}$ right margins and isolated $1.05\times$ toggle switch bounding boxes, providing $\ge 25\text{dp}$ of guaranteed clearance.
 * **3D Cylindrical Tumbler Dial:** Infinite scrolling time selector with haptic feedback gated to physical user drag events (`isScrollInProgress`).
 * **State Preservation:** Integrated `rememberSaveable` across all dialogs, tab selections, and input sheets for orientation-change survival.
+
+### 3. Expanded OS Compatibility (Android 10+ / API 29+)
+* **Lowered Minimum SDK:** Expanded support from Android 12+ down to **Android 10 (API 29+)**, opening ControlHub to millions of older Android smartphones and budget workshop tablets.
+* **Intelligent Dual-Permission Architecture:**
+  * **Android 10–11 (API 29–30):** Automatic fallback to `BLUETOOTH` + `ACCESS_FINE_LOCATION` with an interactive GPS/Location provider check.
+  * **Android 12–15 (API 31–35):** Runtime `BLUETOOTH_SCAN` & `BLUETOOTH_CONNECT` permissions with zero location requirement.
 
 ---
 
