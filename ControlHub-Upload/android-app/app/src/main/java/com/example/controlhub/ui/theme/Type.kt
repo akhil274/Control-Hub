@@ -9,11 +9,11 @@ import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.compose.ui.unit.sp
 import com.example.controlhub.R
 
-// ═══════════════════════════════════════════════
-// Google Fonts Provider — Manrope + Inter
+// ===============================================
+// Google Fonts Provider - Manrope + Inter
 // Manrope: Geometric, editorial headlines
 // Inter: High-legibility body/labels for dark mode
-// ═══════════════════════════════════════════════
+// ===============================================
 
 val fontProvider = GoogleFont.Provider(
     providerAuthority = "com.google.android.gms.fonts",
@@ -40,8 +40,8 @@ val InterFontFamily = FontFamily(
 )
 
 // Dual-typeface typography system
-// Manrope for display & headlines — authoritative, modern
-// Inter for body & labels — legible in dark mode
+// Manrope for display & headlines - authoritative, modern
+// Inter for body & labels - legible in dark mode
 val Typography = Typography(
     displayLarge = TextStyle(
         fontFamily = ManropeFontFamily,
